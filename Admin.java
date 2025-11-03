@@ -18,6 +18,10 @@ public class Admin {
 
 	public Admin(int size) {
 		this.size = size;
+		if(!dir.exists())
+		{
+			dir.mkdir();
+		}
 		accounts = new Account[(dir.listFiles().length) + this.size];
 		accountfiles = new File[(dir.listFiles().length) + (this.size)];
 	}
